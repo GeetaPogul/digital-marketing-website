@@ -19,9 +19,9 @@
             <h1 class="text-2xl font-bold text-[#f4b87bff] mb-2 md:mb-0">DigitalMarketerPro</h1>
             <nav class="space-x-6 text-center">
                 <a href="index.php" class="nav-link text-white hover:text-[#FF6B00] transition">Home</a>
-                <a href="pages/aboutus.php" class="nav-link text-white hover:text-[#FF6B00] transition">About Us</a>
-                <a href="pages/services.php" class="nav-link text-white hover:text-[#FF6B00] transition">Services</a>
-                <a href="pages/contact.php" class="nav-link text-white hover:text-[#FF6B00] transition">Contact</a>
+                <a href="aboutus.php" class="nav-link text-white hover:text-[#FF6B00] transition">About Us</a>
+                <a href="services.php" class="nav-link text-white hover:text-[#FF6B00] transition">Services</a>
+                <a href="contact.php" class="nav-link text-white hover:text-[#FF6B00] transition">Contact</a>
                 <?php if(isset($_SESSION['user'])): ?>
                 <!-- Profile dropdown -->
                 <div class="inline-block relative">
@@ -29,13 +29,16 @@
                          alt="Profile" id="profileBtn" class="w-10 h-10 rounded-full inline-block cursor-pointer border border-gray-300 object-cover">
 
                     <!-- Dropdown -->
-                    <div id="profileMenu" class="hidden absolute right-0 mt-2 w-44 bg-white shadow-lg rounded text-left border border-gray-200">
-                        <a href="pages/edit_profile.php" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Edit Profile</a>
-                        <a href="pages/logout.php" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Logout</a>
+                   <div id="profileMenu"
+                        class="hidden absolute right-0 mt-2 w-44 bg-white shadow-lg rounded text-left border border-gray-200">
+                        <a href="edit_profile.php" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Edit
+                            Profile</a>
+                            <a href="user_dashboard.php" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Dashboard</a>
+                        <a href="logout.php" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Logout</a>
                     </div>
                 </div> 
                 <?php else: ?> 
-                <a href="pages/login.php?redirect=<?php echo urlencode($_SERVER['REQUEST_URI']); ?>" class="nav-link text-white hover:text-[#FF6B00] transition">Login</a> 
+                <a href="login.php?redirect=<?php echo urlencode($_SERVER['REQUEST_URI']); ?>" class="nav-link text-white hover:text-[#FF6B00] transition">Login</a> 
                 <?php endif; ?>
             </nav>
         </div>

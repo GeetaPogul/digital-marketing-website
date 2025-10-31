@@ -32,7 +32,9 @@ $current_page = basename($_SERVER['PHP_SELF']); // get current page name ?>
                     <!-- Dropdown -->
                     <div id="profileMenu" class="hidden absolute right-0 mt-2 w-44 bg-white shadow-lg rounded text-left border border-gray-200">
   <a href="pages/edit_profile.php" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Edit Profile</a>
+  <a href="pages/user_dashboard.php" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Dashboard</a>
   <a href="pages/logout.php" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Logout</a>
+
 </div>
                 </div> <?php else: ?> <a
                     href="pages/login.php?redirect=<?php echo urlencode($_SERVER['REQUEST_URI']); ?>"

@@ -40,10 +40,13 @@ $current_page = basename($_SERVER['PHP_SELF']); // get current page name
               class="w-10 h-10 rounded-full inline-block cursor-pointer border border-gray-300 object-cover">
 
           <!-- Dropdown -->
-          <div id="profileMenu" class="hidden absolute right-0 mt-2 w-44 bg-white shadow-lg rounded text-left border border-gray-200">
-            <a href="edit_profile.php" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Edit Profile</a>
-            <a href="logout.php" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Logout</a>
-          </div>
+          <div id="profileMenu"
+                        class="hidden absolute right-0 mt-2 w-44 bg-white shadow-lg rounded text-left border border-gray-200">
+                        <a href="edit_profile.php" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Edit
+                            Profile</a>
+                            <a href="user_dashboard.php" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Dashboard</a>
+                        <a href="logout.php" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Logout</a>
+                    </div>
         </div>
       <?php else: ?>
         <a href="login.php?redirect=<?php echo urlencode($_SERVER['REQUEST_URI']); ?>" 
